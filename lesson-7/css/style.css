@@ -48,7 +48,7 @@
 /* ============================================================== */
 
  .hero {
-    background: url("img/hero-bg.jpg") no-repeat;
+    background: url("../img/hero-bg.jpg") no-repeat;
     background-position: 10% 50%;
     background-size: cover;
     padding: 120px 0;
@@ -214,3 +214,4 @@
     margin-bottom: 10px;
 
 }
+
