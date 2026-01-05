@@ -1,0 +1,22 @@
+.body {
+    font-family: 'Satoshi', sans-serif;
+    color: var(--main-color);
+    min-width: 375px;
+}
+
+.container {
+    max-width: 1270px;
+    margin: 0 auto;
+    padding-inline: 15px;
+}
+
+button {
+    background: none;
+}
+
+.text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 138%;
+    color: rgba(0, 0, 0, 0.6);
+}

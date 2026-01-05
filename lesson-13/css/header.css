@@ -1,0 +1,261 @@
+.header {
+    position: relative;
+    top: 0;
+    transition: top .3s;
+}
+
+.header__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    padding-top: 28px;
+    padding-bottom: 20px;
+}
+
+.header__burger-and-logo {
+    display: flex;
+    gap: 16px;
+}
+
+.header__burger {
+    display: none;
+}
+
+.logo {
+    display: block;
+    font-family: 'Integral';
+    font-weight: 700;
+    font-size: clamp(1.563rem, 1.373rem + 0.81vw, 2rem);
+    color: var(--main-color);
+}
+
+.header__logo {
+    transform: translateY(-4px);
+}
+
+.header__nav-list {
+    display: flex;
+    gap: 24px;
+}
+
+.header__nav-list-element {
+    flex-shrink: 0;
+    transition: opacity .2s;
+}
+
+@media(any-hover: hover) {
+    .header__nav-list-element:hover {
+        opacity: .7;
+    }
+}
+
+.header__nav-list-element:active {
+    opacity: .5;
+}
+
+.header__nav-list-element a {
+    display: flex;
+    gap: 4px;
+}
+
+.header__nav-list-element {
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--main-color);
+}
+
+.header__search {
+    display: flex;
+    gap: 12px;
+    background: var(--bg-color);
+    border-radius: 62px;
+    padding: 12px 16px;
+    max-width: 462px;
+    width: 100%;
+}
+
+.header__search [placeholder] {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    font-weight: 400;
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.4);
+    background: var(--bg-color);
+}
+
+::-webkit-search-cancel-button {
+    content: "";
+    -webkit-appearance: none;
+    background-image: url(../icon/cross.svg);
+    width: 24px;
+    height: 24px;
+    transform: translateY(2px);
+}
+
+.header__buttons {
+    display: flex;
+    gap: 14px;
+}
+
+.header__cart-button:active,
+.header__account-button:active,
+.header__search-button:active {
+    opacity: .6;
+}
+
+.header__search-button {
+    display: none;
+}
+
+@media(any-hover: hover) {
+
+    .header__search-button,
+    .header__cart-button:hover,
+    .header__account-button:hover {
+        transition: transform .2s;
+    }
+
+    .header__search-button:hover {
+        transform: scale(1.2);
+    }
+
+    .header__cart-button:hover {
+        transform: scale(1.2);
+    }
+
+    .header__account-button:hover {
+        transform: scale(1.2);
+    }
+
+}
+
+
+/* ====================================== */
+
+.burger {
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    bottom: 0;
+    left: -297px;
+    background: var(--bg-color);
+    width: 280px;
+    box-shadow: 0 0 15px 3px var(--main-color);
+    transition: left .3s;
+}
+
+.burger--open {
+    left: 0;
+}
+
+.burger__close {
+    position: absolute;
+    top: 50px;
+    left: 15px;
+}
+
+.burger__nav-list {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding: 120px 0 0 20px;
+}
+
+.burger__nav-list-element {
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--main-color);
+    font-size: 20px;
+}
+
+.burger__logo {
+    position: absolute;
+    bottom: 40px;
+    left: 15px;
+}
+
+/* ======================================= */
+
+.pop-up {
+    position: relative;
+    top: 0;
+    padding-block: 10px;
+    background-color: var(--main-color);
+    color: var(--secondary-color);
+}
+
+.pop-up--close {
+    top: -34px;
+}
+
+.pop-up__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.pop-up__text {
+    font-size: 14px;
+}
+
+.pop-up__link {
+    font-family: 'Montserrat';
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    transition: opacity .2s;
+}
+
+.pop-up__link:hover {
+    opacity: .9;
+}
+
+.pop-up__cross {
+    position: absolute;
+    right: 15px;
+    height: 20px;
+
+}
+
+.pop-up__cross-icon {
+    transition: transform .2s;
+}
+
+.pop-up__cross-icon:hover {
+    transform: scale(1.2);
+}
+
+/* ===================================== */
+
+@media(width<=992px) {
+    .header__search {
+        display: none;
+    }
+
+    .header__search-button {
+        display: block;
+    }
+}
+
+@media(width<768px) {
+    .pop-up__disappearing-text {
+        display: none;
+    }
+
+    .pop-up__link {
+        font-size: 12px;
+    }
+
+    .header__nav-list {
+        display: none;
+    }
+
+    .header__burger {
+        display: block;
+    }
+}

@@ -1,0 +1,157 @@
+.your-style {
+    padding-bottom: 80px;
+}
+
+.your-style__container {
+    background: var(--bg-color);
+    border-radius: 40px;
+    padding: 70px 64px 76px 64px;
+}
+
+.your-style__title {
+    font-family: 'Integral', sans-serif;
+    font-weight: 900;
+    font-size: clamp(1.875rem, 1.387rem + 2.08vw, 3rem);
+    text-align: center;
+    color: #000;
+    padding-bottom: 64px;
+}
+
+.your-style__grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 20px;
+}
+
+.your-style__grid-element {
+    min-height: 290px;
+    min-width: 407px;
+    padding: 25px 0 0 36px;
+    border-radius: 20px;
+}
+
+.your-style__grid-element-1 {
+    background: url(../images/your-style-grid/loose.jpg);
+    background-position: 59% 37%;
+    background-repeat: no-repeat;
+    grid-column: 5 span;
+}
+
+.your-style__grid-element-2 {
+    background: url(../images/your-style-grid/formal.jpg);
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    grid-column: 7 span;
+}
+
+.your-style__grid-element-3 {
+    background: url(../images/your-style-grid/evening.jpg);
+    background-position: 0% 50%;
+    background-repeat: no-repeat;
+    grid-column: 7 span;
+}
+
+.your-style__grid-element-4 {
+    background: url(../images/your-style-grid/sporty.jpg);
+    background-color: var(--secondary-color);
+    background-position: -262% 37%;
+    background-repeat: no-repeat;
+    grid-column: 5 span;
+
+}
+
+.your-style__grid-text {
+    font-weight: 700;
+    font-size: clamp(1.5rem, 1.175rem + 1.39vw, 2.25rem);
+    color: var(--main-color);
+}
+
+/* ============================== */
+
+@media(width<=1100px) {
+
+    .your-style__grid-element-1,
+    .your-style__grid-element-2,
+    .your-style__grid-element-3,
+    .your-style__grid-element-4 {
+        background-color: var(--secondary-color);
+        grid-column: 6 span;
+    }
+}
+
+@media(width<=992px) {
+    .your-style__grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .your-style__container {
+        padding: 40px 20px 27px 24px;
+    }
+
+    .your-style__grid-element-1,
+    .your-style__grid-element-2,
+    .your-style__grid-element-3,
+    .your-style__grid-element-4 {
+        background-color: var(--secondary-color);
+        grid-column: 1;
+    }
+
+    .your-style__grid-element-3 {
+        background-position: 30% 50%;
+    }
+
+    .your-style__grid-element-4 {
+        background-position: 57% 37%;
+    }
+}
+
+@media(width<=576px) {
+    .your-style {
+        padding-bottom: 50px;
+    }
+
+    .your-style__container {
+        max-width: 400px;
+    }
+
+    .your-style__title {
+        padding-bottom: 28px;
+    }
+
+    .your-style__grid-element {
+        min-height: 190px;
+        min-width: 310px;
+        padding: 16px 0 0 24px;
+    }
+
+    .your-style__grid-element-1 {
+        background: url(../images/your-style-grid/loose-mobile.jpg);
+        background-position: 65% 37%;
+        background-repeat: no-repeat;
+    }
+
+    .your-style__grid-element-2 {
+        background: url(../images/your-style-grid/formal-mobile.jpg);
+        background-position: 5% 31%;
+        background-repeat: no-repeat;
+    }
+
+    .your-style__grid-element-3 {
+        background: url(../images/your-style-grid/evening-mobile.jpg);
+        background-position: 5% 75%;
+        background-repeat: no-repeat;
+    }
+
+    .your-style__grid-element-4 {
+        background: url(../images/your-style-grid/sporty-mobile.jpg);
+        background-color: var(--secondary-color);
+        background-position: 92% 38%;
+        background-repeat: no-repeat;
+    }
+}
+ 
+@media(width<=400px) {
+        .your-style__container {
+            max-width: 358px;
+        }
+    }

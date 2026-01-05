@@ -1,0 +1,143 @@
+.reviews {
+    padding-bottom: 170px;
+}
+
+.reviews__container {
+    position: relative;
+}
+
+.reviews__title {
+    font-family: "Integral", sans-serif;
+    font-weight: 900;
+    font-size: clamp(1.875rem, 1.387rem + 2.08vw, 3rem);
+    color: var(--main-color);
+    padding-bottom: 40px;
+}
+
+.card {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    padding: 28px 32px;
+}
+
+.reviews__5-stars {
+    padding-bottom: 15px;
+}
+
+.reviews__name {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding-bottom: 16px;
+}
+
+.reviews__name-text {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 110%;
+    color: var(--main-color);
+}
+
+.reviews__text {
+    height: 110px;
+}
+
+/* ========================================== */
+
+.reviews .slider {
+    overflow: hidden;
+}
+
+.swiper-wrapper {
+    display: flex;
+}
+
+.swiper-slide {
+    height: auto;
+}
+
+.slider-buttons {
+    display: flex;
+    gap: 16px;
+    position: absolute;
+    right: 15px;
+    top: 34px;
+    z-index: 2;
+}
+
+.prev {
+    transition: transform .3s;
+}
+
+@media(any-hover: hover) {
+    .prev:hover {
+        transform: scale(1.1);
+    }
+}
+
+.prev:active {
+    opacity: .8;
+}
+
+.next {
+    transition: transform .3s;
+}
+
+@media(any-hover: hover) {
+    .next:hover {
+        transform: scale(1.1);
+    }
+}
+
+.next:active {
+    opacity: .8;
+}
+
+.slider-track {
+    display: flex;
+    gap: 20px;
+}
+
+/* ========================================== */
+
+@media(width<=576px) {
+    .reviews {
+        padding-bottom: 140px;
+    }
+
+    .card {
+        padding: 24px;
+    }
+
+    .reviews__title {
+        font-size: 30px;
+        line-height: 120%;
+        padding-bottom: 24px;
+    }
+
+    .reviews__5-stars {
+        width: 118px;
+    }
+
+    .reviews__name-text {
+        font-size: 16px;
+        line-height: 138%;
+    }
+
+    .reviews__name-icon {
+        width: 19px;
+        height: 19px;
+    }
+
+    .reviews__text {
+        font-size: 14px;
+        line-height: 143%;
+        height: auto;
+    }
+}
+
+@media(width<=375px) {
+    .slider-buttons {
+        top: 60px;
+    }
+}

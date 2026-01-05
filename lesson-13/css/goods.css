@@ -1,0 +1,164 @@
+.goods-1 {
+    padding-bottom: 64px;
+    margin-bottom: 64px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.goods-2 {
+    padding-bottom: 80px;
+}
+
+.goods__title {
+    font-family: 'Integral', sans-serif;
+    font-weight: 900;
+    font-size: clamp(1.875rem, 1.387rem + 2.08vw, 3rem);
+    color: var(--main-color);
+    text-align: center;
+    padding-bottom: 55px;
+}
+
+.goods__flex {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding-bottom: 36px;
+    width: 100%;
+}
+
+.goods__article {
+    transition: transform .3s;
+}
+
+@media(any-hover: hover) {
+    .goods__article:hover {
+        transform: scale(1.05);
+    }
+}
+
+.goods__article:active {
+    opacity: .8;
+}
+
+.goods__article-img {
+    padding-bottom: 16px;
+}
+
+.goods__article-title {
+    font-weight: 700;
+    font-size: clamp(0.938rem, 0.802rem + 0.58vw, 1.25rem);
+    color: #000;
+    padding-bottom: 8px;
+}
+
+.goods__article-rating {
+    padding-bottom: 8px;
+}
+
+.goods__article-price-flex {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.goods__article-price {
+    font-weight: 700;
+    font-size: clamp(1.125rem, 0.962rem + 0.69vw, 1.5rem);
+    color: #000;
+}
+
+.goods__article-discount {
+    text-decoration: line-through;
+    color: rgba(0, 0, 0, 0.4);
+}
+
+.goods__article-discount-percent {
+    font-weight: 500;
+    font-size: 12px;
+    color: #f33;
+    border-radius: 62px;
+    padding: 6px 14px;
+    background: rgba(255, 51, 51, 0.1);
+}
+
+.goods__button {
+    font-family: "Montserrat";
+    font-weight: 500;
+    font-size: 16px;
+    color: var(--main-color);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 62px;
+    padding: 16px 54px;
+    margin: 0 auto;
+    transition: box-shadow .3s;
+}
+
+@media(any-hover: hover) {
+    .goods__button:hover {
+        box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.1);
+    }
+}
+
+.goods__button:active {
+    opacity: .8;
+}
+
+.goods__button-flex {
+    display: flex;
+    justify-content: center;
+}
+
+@media(width<=1270px) {
+
+    .goods__article-4,
+    .goods__article-8 {
+        display: none;
+    }
+}
+
+@media(width<=992px) {
+    .goods__article-img {
+        width: 220px;
+    }
+}
+
+@media(width<=768px) {
+    .goods__flex {
+        gap: 10px;
+        transform: translateX(10px);
+    }
+
+    .goods__article-3,
+    .goods__article-7 {
+        display: none;
+    }
+}
+
+@media(width<=576px) {
+    .goods-1 {
+        padding-bottom: 40px;
+        margin-bottom: 40px;
+    }
+
+    .goods-2 {
+        padding-bottom: 50px;
+    }
+
+    .goods__button {
+        width: 100%;
+    }
+}
+
+@media(width<=480px) {
+    .goods__article-img {
+        width: 173px;
+    }
+
+    .goods__article-price {
+        font-size: 16px;
+    }
+
+    .goods__article-discount-percent {
+        font-size: 10px;
+        padding: 6px 10px;
+    }
+}
